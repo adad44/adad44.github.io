@@ -3,27 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Awesome Website</title>
+  <title>Will You Be My Valentine?</title>
   <style>
-    /* Basic styles for a simple webpage */
+    /* General styles */
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f9f9f9;
+      background-color: #FFF0F5; /* light, romantic pink */
+      font-family: 'Comic Sans MS', cursive, sans-serif; /* playful font */
       color: #333;
     }
     header {
-      background-color: #4CAF50;
-      color: white;
+      background-color: #ffb6c1; /* pastel pink */
       padding: 20px;
       text-align: center;
+      color: white;
     }
     main {
       padding: 20px;
+      text-align: center;
+    }
+    .valentine-card {
+      background-color: #fff;
+      border: 2px solid #ff69b4;
+      border-radius: 15px;
+      padding: 30px;
+      margin: 30px auto;
+      max-width: 500px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .valentine-card img {
+      width: 300px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .valentine-card h2 {
+      color: #ff1493; /* deeper pink for emphasis */
+      margin-top: 0;
+    }
+    .valentine-card p {
+      font-size: 1.2em;
+      line-height: 1.5;
+    }
+    button {
+      background-color: #ff69b4;
+      border: none;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1em;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #ff85c0;
     }
     footer {
-      background-color: #333;
+      background-color: #ffb6c1;
       color: white;
       text-align: center;
       padding: 10px;
@@ -31,24 +69,30 @@
       width: 100%;
       bottom: 0;
     }
-    a {
-      color: #4CAF50;
-    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Welcome to My Awesome Website</h1>
+    <h1>A Special Question Just for You</h1>
   </header>
 
   <main>
-    <p>This is a basic HTML file that serves as the homepage of your website.</p>
-    <p>You can customize this page by modifying the HTML and CSS as needed.</p>
-    <p>Learn more about HTML on the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN Web Docs</a>.</p>
+    <div class="valentine-card">
+      <!-- Placeholder image for Snoopy (replace with an actual Snoopy image URL if available) -->
+      <img src="https://via.placeholder.com/300x200?text=Snoopy" alt="Cute Snoopy">
+      <h2>Will You Be My Valentine?</h2>
+      <p>
+        Just like Snoopy dreams of adventure and fun, I have a heartfelt wish too.
+      </p>
+      <p>
+        Would you share this special day—and many more—with me?
+      </p>
+      <button onclick="alert('Yay! You made my heart smile!')">Yes, I Will!</button>
+    </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 My Awesome Website. All rights reserved.</p>
+    &copy; 2025 Your Name. All rights reserved.
   </footer>
 </body>
 </html>
