@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Will You Be My Valentine?</title>
   <style>
     /* General styles */
     body {
       margin: 0;
       padding: 0;
-      background-color: #FFF0F5; /* light, romantic pink */
+      background-color: #fff0f5; /* light, romantic pink */
       font-family: 'Comic Sans MS', cursive, sans-serif; /* playful font */
       color: #333;
     }
@@ -31,6 +31,8 @@
       margin: 30px auto;
       max-width: 500px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
     }
     .valentine-card img {
       width: 300px;
@@ -69,6 +71,24 @@
       width: 100%;
       bottom: 0;
     }
+    /* Snoopy gallery for extra cuteness */
+    .snoopy-gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .snoopy-gallery img {
+      width: 150px;
+      height: auto;
+      margin: 10px;
+      border-radius: 10px;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
   </style>
 </head>
 <body>
@@ -77,9 +97,9 @@
   </header>
 
   <main>
-    <div class="valentine-card">
-      <!-- Placeholder image for Snoopy (replace with an actual Snoopy image URL if available) -->
-      <img src="https://via.placeholder.com/300x200?text=Snoopy" alt="Cute Snoopy">
+    <div class="valentine-card" id="valentineCard">
+      <!-- Primary Snoopy image (replace with an actual Snoopy image URL if available) -->
+      <img src="https://via.placeholder.com/300x200?text=Snoopy" alt="Cute Snoopy" />
       <h2>Will You Be My Valentine?</h2>
       <p>
         Just like Snoopy dreams of adventure and fun, I have a heartfelt wish too.
@@ -87,12 +107,42 @@
       <p>
         Would you share this special day—and many more—with me?
       </p>
-      <button onclick="alert('Yay! You made my heart smile!')">Yes, I Will!</button>
+      <button onclick="celebrateValentine()">Yes, I Will!</button>
+    </div>
+
+    <div class="snoopy-gallery">
+      <!-- Additional Snoopy images for extra cuteness -->
+      <img src="https://via.placeholder.com/150?text=Snoopy+1" alt="Snoopy 1" />
+      <img src="https://via.placeholder.com/150?text=Snoopy+2" alt="Snoopy 2" />
+      <img src="https://via.placeholder.com/150?text=Snoopy+3" alt="Snoopy 3" />
     </div>
   </main>
 
   <footer>
     &copy; 2025 Your Name. All rights reserved.
   </footer>
+
+  <!-- Confetti library from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script>
+    function celebrateValentine() {
+      // Trigger a confetti burst
+      confetti({
+        particleCount: 150,
+        spread: 100,
+        origin: { y: 0.6 }
+      });
+      
+      // After a brief delay, update the card content to show a happy message
+      setTimeout(function() {
+        const card = document.getElementById('valentineCard');
+        card.innerHTML = `
+          <img src="https://via.placeholder.com/300x200?text=Happy+Snoopy" alt="Happy Snoopy" />
+          <h2>Hip Hip Hooray! You Made My Heart Smile!</h2>
+          <p>I'm geeked now your my Valentine!</p>
+        `;
+      }, 1000); // 1-second delay before updating the content
+    }
+  </script>
 </body>
 </html>
