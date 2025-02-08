@@ -124,18 +124,16 @@
   <main>
     <div class="valentine-card" id="valentineCard">
       <!-- Main cute cartoon dog image from Pixabay -->
-      <img src="https://cdn.pixabay.com/photo/2016/10/25/12/28/dog-1769783_1280.png" alt="Cute Cartoon Dog" />
-      <h2>Will You Be My Valentine?</h2>
-      <p>Just like a fun-loving cartoon pup, I have a heartfelt wish too.</p>
-      <p>Would you share this special day—and many more—with me?</p>
+      <img src="https://i.etsystatic.com/13611280/r/il/ea3e45/2109458999/il_570xN.2109458999_lx9n.jpg" />
+      <h2>Will You Be My Valentine Melissa?</h2>
       <button onclick="celebrateValentine()">Yes, I Will!</button>
     </div>
 
     <div class="snoopy-gallery">
       <!-- Additional cute cartoon dog images for extra charm -->
-      <img src="https://cdn.pixabay.com/photo/2016/04/01/09/28/cartoon-1299383_1280.png" alt="Cute Cartoon Dog 1" />
-      <img src="https://cdn.pixabay.com/photo/2018/03/30/12/15/cartoon-3270740_1280.png" alt="Cute Cartoon Dog 2" />
-      <img src="https://cdn.pixabay.com/photo/2016/03/31/15/16/dog-1299218_1280.png" alt="Cute Cartoon Dog 3" />
+      <img src="https://a0.anyrgb.com/pngimg/1378/1610/v-2-isis-v-2-sanrio-snoopy-hello-kitty-kitty-valentine-s-day-music-download-fairy.png" />
+      <img src="https://wallpapercave.com/wp/wp13331042.jpg" />
+      <img src="https://c0.klipartz.com/pngpicture/695/879/gratis-png-ilustracion-de-hello-kitty-estampado-de-lienzo-de-hello-hello-kitty-hello-kitty-thumbnail.png" />
     </div>
   </main>
 
@@ -149,17 +147,17 @@
     function celebrateValentine() {
       // Launch a confetti burst
       confetti({
-        particleCount: 150,
-        spread: 100,
+        particleCount: 300,
+        spread: 200,
         origin: { y: 0.6 }
       });
       // After a brief delay, update the card with a joyful message
       setTimeout(function() {
         const card = document.getElementById('valentineCard');
         card.innerHTML = `
-          <img src="https://cdn.pixabay.com/photo/2016/10/25/12/28/dog-1769783_1280.png" alt="Happy Cartoon Dog" />
-          <h2>Yay! You Made My Heart Smile!</h2>
-          <p>I'm over the moon knowing you'll be my Valentine!</p>
+          <img src="https://cdn.inspireuplift.com/uploads/images/seller_products/40549/1705716273_0601241071-cute-kissing-snoopy-valentine-svg-0601241071png.png" />
+          <h2>Hip Hip Hooray! You Made Me GEEKED!</h2>
+          <p>Now oil Up!</p>
         `;
       }, 1000);
     }
